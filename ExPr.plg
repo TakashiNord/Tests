@@ -1,0 +1,57 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: ExPr - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x419 /fo"Release/ExPr.res" /d "NDEBUG" /d "_AFXDLL" "C:\Users\Tanuki\Desktop\ii\Тестовое задание (программист С++)\ExPr.rc"" 
+Creating temporary file "C:\Users\Tanuki\AppData\Local\Temp\RSP79A2.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Release/ExPr.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Users\Tanuki\Desktop\ii\Тестовое задание (программист С++)\Book.cpp"
+"C:\Users\Tanuki\Desktop\ii\Тестовое задание (программист С++)\Disks.cpp"
+"C:\Users\Tanuki\Desktop\ii\Тестовое задание (программист С++)\ExPr.cpp"
+"C:\Users\Tanuki\Desktop\ii\Тестовое задание (программист С++)\ExPrDlg.cpp"
+"C:\Users\Tanuki\Desktop\ii\Тестовое задание (программист С++)\Shop.cpp"
+]
+Creating command line "cl.exe @C:\Users\Tanuki\AppData\Local\Temp\RSP79A2.tmp" 
+Creating temporary file "C:\Users\Tanuki\AppData\Local\Temp\RSP79A3.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Release/ExPr.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Users\Tanuki\Desktop\ii\Тестовое задание (программист С++)\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\Users\Tanuki\AppData\Local\Temp\RSP79A3.tmp" 
+Creating temporary file "C:\Users\Tanuki\AppData\Local\Temp\RSP79A4.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:no /pdb:"Release/ExPr.pdb" /machine:I386 /out:"Release/ExPr.exe" 
+".\Release\Book.obj"
+".\Release\Disks.obj"
+".\Release\ExPr.obj"
+".\Release\ExPrDlg.obj"
+".\Release\Shop.obj"
+".\Release\StdAfx.obj"
+".\Release\ExPr.res"
+]
+Creating command line "link.exe @C:\Users\Tanuki\AppData\Local\Temp\RSP79A4.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+Book.cpp
+Disks.cpp
+ExPr.cpp
+ExPrDlg.cpp
+Shop.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+ExPr.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
