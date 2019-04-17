@@ -1,0 +1,69 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Pr - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x419 /fo"Release/Pr.res" /d "NDEBUG" /d "_AFXDLL" "C:\Users\Tanuki\Desktop\Pr\Pr.rc"" 
+Creating temporary file "C:\Users\Tanuki\AppData\Local\Temp\RSP5B86.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Release/Pr.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Users\Tanuki\Desktop\Pr\Book.cpp"
+"C:\Users\Tanuki\Desktop\Pr\Disks.cpp"
+"C:\Users\Tanuki\Desktop\Pr\MainFrm.cpp"
+"C:\Users\Tanuki\Desktop\Pr\MyListView.cpp"
+"C:\Users\Tanuki\Desktop\Pr\MyTreeView.cpp"
+"C:\Users\Tanuki\Desktop\Pr\Pr.cpp"
+"C:\Users\Tanuki\Desktop\Pr\PrDoc.cpp"
+"C:\Users\Tanuki\Desktop\Pr\PrView.cpp"
+"C:\Users\Tanuki\Desktop\Pr\Shop.cpp"
+]
+Creating command line "cl.exe @C:\Users\Tanuki\AppData\Local\Temp\RSP5B86.tmp" 
+Creating temporary file "C:\Users\Tanuki\AppData\Local\Temp\RSP5B97.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Release/Pr.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Users\Tanuki\Desktop\Pr\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\Users\Tanuki\AppData\Local\Temp\RSP5B97.tmp" 
+Creating temporary file "C:\Users\Tanuki\AppData\Local\Temp\RSP5B98.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:no /pdb:"Release/Pr.pdb" /machine:I386 /out:"Release/Pr.exe" 
+.\Release\Book.obj
+.\Release\Disks.obj
+.\Release\MainFrm.obj
+.\Release\MyListView.obj
+.\Release\MyTreeView.obj
+.\Release\Pr.obj
+.\Release\PrDoc.obj
+.\Release\PrView.obj
+.\Release\Shop.obj
+.\Release\StdAfx.obj
+.\Release\Pr.res
+]
+Creating command line "link.exe @C:\Users\Tanuki\AppData\Local\Temp\RSP5B98.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+Book.cpp
+Disks.cpp
+MainFrm.cpp
+MyListView.cpp
+MyTreeView.cpp
+Pr.cpp
+PrDoc.cpp
+PrView.cpp
+Shop.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+Pr.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
