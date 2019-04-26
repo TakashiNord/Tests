@@ -1,0 +1,20 @@
+Start tag: title
+Data     :  Названа причина сбоя в энергосистеме Дальнего Востока - Газета.Ru 
+End tag  : title
+
+Start tag: iframe
+     attr: ('src', 'https://subscriptions.rambler.ru/subscribe_form/gazeta:header/')
+     attr: ('style', 'width:100%')
+End tag  : iframe
+
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+
+source = unicode(source, 'utf-8')
+string.decode('utf-8')  # or:
+
+import re
+s = 'Подскажите, как разбить строку по нескольким символам ?'
+re.split(',|\?',s)
+
+
+
