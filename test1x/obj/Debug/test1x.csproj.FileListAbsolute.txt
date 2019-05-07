@@ -1,0 +1,8 @@
+C:\Users\gal\Documents\SharpDevelop Projects\test1x\test1x\bin\Debug\test1x.exe.config
+C:\Users\gal\Documents\SharpDevelop Projects\test1x\test1x\bin\Debug\test1x.exe
+C:\Users\gal\Documents\SharpDevelop Projects\test1x\test1x\bin\Debug\test1x.pdb
+C:\Users\gal\Documents\SharpDevelop Projects\test1x\test1x\obj\Debug\test1x.csprojResolveAssemblyReference.cache
+C:\Users\gal\Documents\SharpDevelop Projects\test1x\test1x\obj\Debug\test1x.MainForm.resources
+C:\Users\gal\Documents\SharpDevelop Projects\test1x\test1x\obj\Debug\test1x.csproj.GenerateResource.Cache
+C:\Users\gal\Documents\SharpDevelop Projects\test1x\test1x\obj\Debug\test1x.exe
+C:\Users\gal\Documents\SharpDevelop Projects\test1x\test1x\obj\Debug\test1x.pdb
