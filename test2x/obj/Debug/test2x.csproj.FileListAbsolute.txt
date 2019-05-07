@@ -1,0 +1,16 @@
+C:\Users\gal\Documents\SharpDevelop Projects\test2x\test2x\bin\Debug\test2x.exe.config
+C:\Users\gal\Documents\SharpDevelop Projects\test2x\test2x\bin\Debug\test2x.exe
+C:\Users\gal\Documents\SharpDevelop Projects\test2x\test2x\bin\Debug\test2x.pdb
+C:\Users\gal\Documents\SharpDevelop Projects\test2x\test2x\obj\Debug\test2x.csprojResolveAssemblyReference.cache
+C:\Users\gal\Documents\SharpDevelop Projects\test2x\test2x\obj\Debug\test2x.csproj.GenerateResource.Cache
+C:\Users\gal\Documents\SharpDevelop Projects\test2x\test2x\obj\Debug\test2x.exe
+C:\Users\gal\Documents\SharpDevelop Projects\test2x\test2x\obj\Debug\test2x.pdb
+C:\Users\gal\Documents\SharpDevelop Projects\test2x\test2x\obj\Debug\test2x.MainForm.resources
+C:\Users\Tanuki\Documents\SharpDevelop Projects\test2x\test2x\bin\Debug\test2x.exe.config
+C:\Users\Tanuki\Documents\SharpDevelop Projects\test2x\test2x\bin\Debug\test2x.exe
+C:\Users\Tanuki\Documents\SharpDevelop Projects\test2x\test2x\bin\Debug\test2x.pdb
+C:\Users\Tanuki\Documents\SharpDevelop Projects\test2x\test2x\obj\Debug\test2x.csprojResolveAssemblyReference.cache
+C:\Users\Tanuki\Documents\SharpDevelop Projects\test2x\test2x\obj\Debug\test2x.MainForm.resources
+C:\Users\Tanuki\Documents\SharpDevelop Projects\test2x\test2x\obj\Debug\test2x.csproj.GenerateResource.Cache
+C:\Users\Tanuki\Documents\SharpDevelop Projects\test2x\test2x\obj\Debug\test2x.exe
+C:\Users\Tanuki\Documents\SharpDevelop Projects\test2x\test2x\obj\Debug\test2x.pdb
