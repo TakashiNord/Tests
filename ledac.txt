@@ -1,0 +1,146 @@
+
+
+22
+SSH-2.0-OpenSSH_5.1p1 FreeBSD-20080901 
+ 
+25
+220 saturn.ledas.com ESMTP Sendmail 8.14.4/8.14.4; Wed, 25 Mar 2020 14:30:30 +0700 (+07) 
+
+
+80
+
+Имя сервера : Apache/1.3.37 (Unix) mod_ssl/2.8.28 OpenSSL/0.9.8e PHP/4.4.9 with Suhosin-Patch rus/PL30.22 
+состояние : 301 (Moved Permanently) 
+расположение : http://ledas.com/ 
+текущие дата и время : Wed, 25 Mar 2020 07:31:06 GMT 
+формат содержимого : text/html; charset=iso-8859-1 
+соединение : close 
+
+
+Список почтовых адресов найденных на веб-сервере: 
+
+info@ledas.com 
+
+info@c3dlabs.com 
+
+marketing@rengabim.com 
+
+nfo@ledas.com 
+
+
+110
+
+443
+Имя сервера : nginx/1.10.3 (Ubuntu) 
+состояние : 302 (Found) 
+расположение : /en/mod_ssl:error:HTTP-request/ 
+текущие дата и время : Wed, 25 Mar 2020 07:31:31 GMT 
+формат содержимого : text/html; charset=utf-8 
+соединение : close 
+
+Версия сервера не подтверждалась эвристически 
+
+
+587
+220 saturn.ledas.com ESMTP Sendmail 8.14.4/8.14.4; Wed, 25 Mar 2020 14:31:31 +0700 (+07) 
+
+995
+Имя сервиса : Secure Socket Layer (SSL) 
+
+8888
+Имя сервера : Apache/1.3.37 (Unix) mod_ssl/2.8.28 OpenSSL/0.9.8e PHP/4.4.9 with Suhosin-Patch rus/PL30.22 
+состояние : 403 (Forbidden) 
+текущие дата и время : Wed, 25 Mar 2020 07:32:22 GMT 
+формат содержимого : text/html; charset=iso-8859-1 
+соединение : close 
+
+
+  Доступна информация 
+Доступен метод TRACE 
+ Описание 
+ 
+ С помощью использования метода TRACE в протоколе HTTP возможно выполнение атаки межсайтовый скриптинг. 
+ Решение 
+ 
+ Запретить выполнение этого метода. 
+ Ссылки 
+ 
+ Cert (VU#867593): http://www.kb.cert.org/vuls/id/867593 
+http://www.cgisecurity.com/articles/xss-faq.shtml 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Отправленое Вами сообщение не может быть доставлено получателю.
+Данное сообщение сформировано автоматически, не отвечайте на него.
+
+Your message could not be delivered to one or more recipients.
+This message was created automatically.
+
+Причина (details):
+
+<info@ledas.com>: host saturn.ledas.com[109.202.2.217] said: 550 5.7.1
+    <info@ledas.com>... Access denied (in reply to RCPT TO command)
+
+
+Reporting-MTA: dns; mc-spool1.in.ngs.ru
+X-fallback-Queue-ID: 4E635187792
+X-fallback-Sender: rfc822; evg.gal@ngs.ru
+Arrival-Date: Tue, 24 Mar 2020 20:12:48 +0700 (+07)
+
+Final-Recipient: rfc822; info@ledas.com
+Original-Recipient: rfc822;info@ledas.com
+Action: failed
+Status: 5.7.1
+Remote-MTA: dns; saturn.ledas.com
+Diagnostic-Code: smtp; 550 5.7.1 <info@ledas.com>... Access denied
+
+
+Return-Path: <evg.gal@ngs.ru>
+Received: from smtpout.ngs.ru (postfix_iface [172.16.113.66])
+	by mc-spool1.in.ngs.ru (fallback) with ESMTP id 4E635187792
+	for <info@ledas.com>; Tue, 24 Mar 2020 20:12:48 +0700 (+07)
+Received: from naphanya (unknown [5.128.178.99])
+	(Authenticated sender: evg.gal@ngs.ru)
+	by mail.ngs.ru (smtp) with ESMTPA id 2354D18780F
+	for <info@ledas.com>; Tue, 24 Mar 2020 20:12:37 +0700 (+07)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=ngs.ru; s=mail1;
+	t=1585055558; bh=is+kJAcO3L/A942KY3ZQxKxsPgU4lUD/E+tiYX8bIjM=;
+	l=330758;
+	h=Date:From:To:Message-ID:Subject:MIME-Version:Content-Type;
+	b=fBJF9bzZJBqzwncruxoBOHVpDITtu0Ikhl8SQvrUzWUnzsaEhoQ5WjhaRBbxGWqM8
+	 pKG/9vw42KbO/j4ceRrizgfeaPyPEeOxnNNBOrp3flGbJrWiTOYI26XHvI4xWxdI53
+	 cNiZFhNq4m3cDplm5oWqX4VrDTL3NxsjeJT8HKl8=
+Date: Tue, 24 Mar 2020 16:13:56 +0300
+From: evg.gal@ngs.ru
+To: info@ledas.com
+X-Mailer: Blat v3.2.19, a Win32 SMTP/NNTP mailer http://www.blat.net
+Message-ID: <01d601de$Blat.v3.2.19$12dda04a$12f0b1a880d2@127.0.0.1>
+Subject: When the ban is lifted ? 778
+MIME-Version: 1.0
+Content-Type: multipart/mixed;
+ boundary="=_BlatBoundary-fCsbSpIcz6IQZprjgJD3C"
+X-KLMS-Rule-ID: 1
+X-KLMS-Message-Action: clean
+X-KLMS-AntiSpam-Lua-Profiles: 139415 [May 13 2019]
+X-KLMS-AntiSpam-Version: 5.8.14.0
+X-KLMS-AntiSpam-Envelope-From: evg.gal@ngs.ru
+X-KLMS-AntiSpam-Rate: 15
+X-KLMS-AntiSpam-Status: not_detected
+X-KLMS-AntiSpam-Method: none
+X-KLMS-AntiSpam-Info: LuaCore: 270 270 6c51353dd3ca3e23ee775cfa699b78fb2292d8a9, {rep_avail}, {Sent by Blat}, 127.0.0.199:7.1.2;5.128.178.99:7.1.2;d41d8cd98f00b204e9800998ecf8427e.com:7.1.1;ngs.ru:7.1.1, Auth:dmarc=fail header.from=ngs.ru policy=reject;spf=softfail smtp.mailfrom=ngs.ru;dkim=none, dmarc_local_policy_1, ApMailHostAddress: 5.128.178.99
+X-KLMS-AntiSpam-Interceptor-Info: scan successful
+X-KLMS-AntiPhishing: not scanned, disabled by settings
+X-KLMS-AntiVirus: Kaspersky Security 8.0 for Linux Mail Server, version 8.0.1.705, not scanned, license restriction
+X-Virus-Scanned: clamav-milter 0.98.6 at mc-filter1
+X-Virus-Status: Clean
