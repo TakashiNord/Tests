@@ -1,0 +1,60 @@
+
+При выполнении задания можно пользоваться словарем, но запрещается
+пользоваться программами для полнотекстового перевода.
+I. Переведите на английский язык:
+1) Когда открывается диалоговое окно "Break List", кнопка "Remove"
+активна, хотя ни один из элементов списка не выделен. Если нажать на эту
+кнопку, она деактивируется и не активируется после выбора какого-нибудь
+(любого) элемента из списка. Когда открывается диалоговое окно "Break
+List", кнопка "Remove" должна быть неактивна и должна становиться
+активной при выборе элемента(ов) из списка.
+2) Если на монохромный файл при помощи компонента накладывается цветная
+надпись, цвет шрифта в изображении меняется на цвет штампа. Цвет шрифта
+не должен меняться.
+
+
+1) When dialog opens "Break List", "Remove"button
+active, though none of the list items is not selected. If you click on this
+button, it is deactivated and not activated after selecting some
+(any) element from the list. When dialog opens "Break
+List", "Remove" button should be inactive and should become
+active when you select an item(s) from the list.
+2) If using a mono file by using the superimposed color
+the inscription, the font color in the image is changed to the color of the stamp. Font color
+should not be changed.
+
+
+
+
+
+II. Переведите на русский язык:
+This document describes an extension to the HTTP/1.1 protocol that allows
+clients to perform remote web content authoring operations. This
+extension provides a coherent set of methods, headers, request entity
+body formats, and response entity body formats that provide operations
+for:
+- Properties: The ability to create, remove, and query information about
+Web pages, such as their authors, creation dates, etc. Also, the ability
+to link pages of any media type to related pages.
+- Collections: The ability to create sets of documents and to retrieve a
+hierarchical membership listing (like a directory listing in a file
+system).
+- Locking: The ability to keep more than one person from working on a
+document at the same time.
+
+
+
+Этот документ описывает расширение протокола HTTP / 1.1, которое позволяет
+клиенты для выполнения операций создания удаленного веб-содержимого. Этот
+расширение предоставляет согласованный набор методов, заголовков, сущности запроса
+форматы тела, и ответ лица, тела форматах, которые предоставляют операции
+для:
+- Свойства: возможность создавать, удалять и запрашивать информацию о
+Веб-страницы, такие как авторы, даты создания и т. д. Кроме того, способность
+связывать страницы любого типа с соответствующими страницами.
+- Коллекции: Возможность создавать наборы документов и извлекать
+иерархический список членства (как список каталогов в файле
+система.)
+- Блокировка: Возможность держать более чем одного человека от работы на
+документ в то же время.
+

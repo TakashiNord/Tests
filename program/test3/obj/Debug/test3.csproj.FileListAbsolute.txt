@@ -1,0 +1,12 @@
+C:\Users\Tanuki\Documents\SharpDevelop Projects\test3\test3\bin\Debug\test3.exe.config
+C:\Users\Tanuki\Documents\SharpDevelop Projects\test3\test3\bin\Debug\test3.exe
+C:\Users\Tanuki\Documents\SharpDevelop Projects\test3\test3\bin\Debug\test3.pdb
+C:\Users\Tanuki\Documents\SharpDevelop Projects\test3\test3\obj\Debug\test3.csprojResolveAssemblyReference.cache
+C:\Users\Tanuki\Documents\SharpDevelop Projects\test3\test3\obj\Debug\test3.exe
+C:\Users\Tanuki\Documents\SharpDevelop Projects\test3\test3\obj\Debug\test3.pdb
+C:\Users\Tanuki\Desktop\атапи-2\test3\test3\bin\Debug\test3.exe.config
+C:\Users\Tanuki\Desktop\атапи-2\test3\test3\bin\Debug\test3.exe
+C:\Users\Tanuki\Desktop\атапи-2\test3\test3\bin\Debug\test3.pdb
+C:\Users\Tanuki\Desktop\атапи-2\test3\test3\obj\Debug\test3.csprojResolveAssemblyReference.cache
+C:\Users\Tanuki\Desktop\атапи-2\test3\test3\obj\Debug\test3.exe
+C:\Users\Tanuki\Desktop\атапи-2\test3\test3\obj\Debug\test3.pdb
