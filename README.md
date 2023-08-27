@@ -28,9 +28,9 @@
 
   **test2_Bank** - https://github.com/TakashiNord/Tests/tree/test2_Bank
 
-  **test_ant** - https://github.com/TakashiNord/Tests/tree/test_ant%2Bsecurely  (2017-10
+  **test_ant** - https://github.com/TakashiNord/Tests/tree/test_ant%2Bsecurely  (2017-10)
   
-  **ledas** - https://github.com/TakashiNord/Tests/tree/ledas  - тут история такая: я отправлял к ним на hh резюме. отклика не было. затем я забывал. снова появлалась вакансия. Снова оправлял.
+  **ledas** - https://github.com/TakashiNord/Tests/tree/ledas  - тут история такая: я отправлял к ним на hh резюме. отклика не было. затем я забывал. снова появлялась вакансия. Снова оправлял.
    однажды мне пришло письмо: "Ты дурак , что ли". ну , я поспамил им, на ящик, поиздевался. На хер , послал. Меня забанили. Надо было рожу набить.
    Заодно, приложил доклад умных людей, с предложением отказаться от услуг компании Ледас ввиду того, что они тупые.
   
